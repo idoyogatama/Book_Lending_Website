@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/idoym.jpg">
+    <title>Book Lending Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+        <!-- mulai navbar -->
+    <header id="beranda">
+        <nav>
+            <h1 class="head_bar__title">Book Lending Website</h1>
+        </nav>
+    </header>
+        <!-- akhir navbar -->
+        <!-- mulai konten -->
+    <main>
+        <div id="content" class="elemen-transisi">
+            <section class="input_section card">
+                <h2>Enter New Book</h2>
+                    <form id="inputBook">
+                        <div class="input">
+                            <label for="inputBookTitle">Title :</label>
+                            <input id="inputBookTitle" type="text" placeholder="Enter book title..." required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookAuthor">Writer :</label>
+                            <input id="inputBookAuthor" type="text" placeholder="Enter the author of the book..." required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookYear">Year :</label>
+                            <input id="inputBookYear" type="number" placeholder="Enter the book year..." required>
+                        </div>
+                        <div class="input_inline">
+                            <label for="inputBookIsComplete">Done reading</label>
+                            <input id="inputBookIsComplete" type="checkbox">
+                        </div>
+                            <button id="bookSubmit" type="submit">Put the Book on the shelf<span>, Not finished reading</span></button>
+                    </form>
+            </section>
+                    <div id="container">
+                        <article class="book_shelf card">
+                            <h2>Not finished reading</h2>
+                                <ul id="incompleteBookshelfList" class="book_list">
+                                </ul>
+                        </article>
+                        <article class="card"> 
+                            <h2>Done reading</h2>
+                                <ul id="completeBookshelfList" class="book_list">
+                                </ul>
+                        </article>
+                    </div>
+        </div>
+        <!-- mulai konten aside-->
+        <aside class="elemen-transisi">
+            <article id="informasi" class="card">
+                <section class="search_section">
+                    <h2>Search Books (Optional)</h2>
+                        <form id="searchBook">
+                            <label for="searchBookTitle"><strong>Title :</strong> </label>
+                            <input id="searchBookTitle" name="searchBookTitle" placeholder="Find a typebook here..." type="text">
+                            <button id="searchSubmit" name="searchSubmit" type="submit">Search</button>
+                        </form>
+                </section>
+                            <br>
+                            <br>
+            </article>
+            <article id="profil" class="card">
+                <header>
+                    <h2>Contact us</h2>
+                        <figure>
+                            <img src="assets/images/profilku.jpg" class="featured-image">
+                        </figure>
+                </header>
+                    <section>
+                        <h2>Hello all 👋 me,</h2>
+                        <h1 class="lead"></h1>
+                        <p><strong>Ready to help .</strong></p>
+                    </section>
+                    <div class="profil-contact">
+                        <p><strong>E-mail <q>idoyogatama</q></strong></p>
+                            <a href="mailto:idoyogatama@gmail.com?Subject=Hallo%20admin" target="_blank"><img src="assets/images/email.png" alt="email pribadi"></a>
+                        <p><strong>Github <q>idoyogatama</q></strong></p>
+                            <a href="https://github.com/idoyogatama" target="_blank"><img src="assets/images/github.png" alt="github idoyogatama"></a>
+                        <p><strong>LinkedIn <q>idoyogatama</q></strong></p>
+                        <a href="https://www.linkedin.com/in/ido-yogatama-mustofa-9a7464171/" target="_blank"><img src="assets/images/linkidn2.jpg" alt="LinkedIn idoyogatama"></a>
+                            <br>
+                    </div>
+            </article>
+        </aside>
+        <div class="clear"></div>
+        <div id="kontak" class="card">
+            <div class="box-contact">
+                <h2>Please send feedback here.</h2>
+                <form action="" class="elemen-transisi">
+                    <input type="text" placeholder="Name" required>
+                    <input type="number" placeholder="No. phone">
+                    <input type="email" placeholder="Email" class="validate">
+                    <textarea name="text" id="" cols="30" rows="10" placeholder="Send Message"></textarea>
+                    <button>Send</button>
+                </form>
+            </div>     
+        </div>
+    </main>
+        <!-- akhir konten dan (aside) -->
+        <!-- mulai footer -->
+    <footer>
+        <p>Book Lending Website &copy; 2022, Dicoding Academy</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/TextPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.lead', {duration:5.0, delay:1.5, text:'Ido Yogatama Mustofa'});
+    </script>
+        <!-- akhir footer -->
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
